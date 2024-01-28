@@ -1,0 +1,23 @@
+name: Deploy
+on: 
+  push: 
+#    branches: [ master ]
+jobs: 
+  build: 
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 2
+    - name: npm ci. build
+      run: |
+        npm ci
+        npm run build
+    - name: Deploy to Hosting
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+#        local-dir: ./dist/
+#        server: SERVER
+#        username: USERNAME
+#        password: PASSWORDg
+#        server-dir: PATH
