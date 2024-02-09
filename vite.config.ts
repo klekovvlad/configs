@@ -19,6 +19,7 @@ export default defineConfig({
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
       '@ui': path.resolve(__dirname, './src/ui'),
+      '@ui/icons': path.resolve(__dirname, './src/ui/icons'),
     },
   },
 });
