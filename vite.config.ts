@@ -8,11 +8,11 @@ export default defineConfig({
   plugins: [react(), svgr()],
   server: {
     proxy: {
-      // ['/wp-json']: {
-      //   target: 'https://megafilmbe.klekovvlad.ru',
-      //   changeOrigin: true,
-      //   secure: false,
-      // },
+      ['/wp-json']: {
+        target: 'https://admin.vsekupeli.ru',
+        changeOrigin: true,
+        secure: false,
+      },
     },
   },
   resolve: {
